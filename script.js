@@ -1,21 +1,38 @@
 function resultshow() {
     var students = {
-        SARFARAZ: {
-            Bio: "98",
-            Physics: "89",
-            Chemistry: "64"
+        "001": {
+            rollNumber: "001",
+            studentName: "A",
+            fatherName: "****************",
+            motherName: "aa",
+            courseName: "WDD",
+            session: "Jan 2023 - Jun 2023",
+            passingYear: "2023",
+            result: "A+",
         },
-        RIZWAN: {
-            Bio: "70",
-            Physics: "89",
-            Chemistry: "64"
+        "002": {
+            rollNumber: "002",
+            studentName: "B",
+            fatherName: "****************",
+            motherName: "****************",
+            courseName: "****************",
+            session: "****************",
+            passingYear: "****************",
+            result: "A+",
         },
-        HAIDER: {
-            Bio: "100",
-            Physics: "68",
-            Chemistry: "78"
-        }
+        "003": {
+            rollNumber: "003",
+            studentName: "C",
+            fatherName: "****************",
+            motherName: "****************",
+            courseName: "W****************",
+            session: "****************",
+            passingYear: "****************",
+            result: "A+",
+        },
+
     };
+
     var sname = document.getElementById("sname").value;
     var input = sname.toUpperCase();
     var show = students[input];
@@ -24,8 +41,13 @@ function resultshow() {
     if (show == undefined) {
         showresult.innerHTML = "No Record Found!";
     } else {
-        showresult.innerHTML = "Your Marks in Bio is " + show.Bio + "<br>";
-        showresult.innerHTML += "Your Marks in Physics is " + show.Physics + "<br>";
-        showresult.innerHTML += "Your Marks in Chemistry is " + show.Chemistry + "<br>";
+        showresult.innerHTML = "Roll Number: " + show.rollNumber + "<br>";
+        showresult.innerHTML += "Student Name: " + show.studentName + "<br>";
+        showresult.innerHTML += "Father's Name: " + show.fatherName + "<br>";
+        showresult.innerHTML += "Mother's Name: " + show.motherName + "<br>";
+        showresult.innerHTML += "Course Name: " + show.courseName + "<br>";
+        showresult.innerHTML += "Session: " + show.session + "<br>";
+        showresult.innerHTML += "Passing Year: " + show.passingYear + "<br>";
+        showresult.innerHTML += "Result: " + show.result;
     }
 }
