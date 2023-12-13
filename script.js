@@ -17,17 +17,15 @@ function resultshow() {
         }
     };
     var sname = document.getElementById("sname").value;
-    var input = sname.toUppercase();
+    var input = sname.toUpperCase();
     var show = students[input];
     var showresult = document.getElementById("resultcontainer");
 
-
     if (show == undefined) {
-        showresult.innerHTML = "No Record Found!"
-    }
-    else {
-        showresult.innerHTML = "Your Marks in Bio is" + show.Bio + "</br>";
-        showresult.innerHTML = "Your Marks in Physics is" + show.Physics + "</br>";
-        showresult.innerHTML = "Your Marks in Chemistry is" + show.Chemistry + "</br>";
+        showresult.innerHTML = "No Record Found!";
+    } else {
+        showresult.innerHTML = "Your Marks in Bio is " + show.Bio + "<br>";
+        showresult.innerHTML += "Your Marks in Physics is " + show.Physics + "<br>";
+        showresult.innerHTML += "Your Marks in Chemistry is " + show.Chemistry + "<br>";
     }
 }
